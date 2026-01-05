@@ -1,11 +1,33 @@
 import SpanishIcon from "../src/assets/images/spanish.png";
 import EnglishIcon from "../src/assets/images/english.png";
 import logo from "../src/assets/images/logo.webp";
+import bot from "../src/assets/images/resumiabot.webp";
+
+//Home
+
+export const hero = {
+  es: {
+    supertitle:"Curriculum potenciados con ia",
+    title: "Analiza, mejora o crea tu Curriculum",
+    subtitle:
+      "Resumia te ayuda a destacar frente a los sistemas de selección automática y los reclutadores.",
+      ctaAnalyzer: "Analizar CV",
+      ctaCreator: "Crear CV",
+  },
+  en: {
+    supertitle:"AI-powered Resume",
+    title: "Analyze, improve, or create your resume.",
+    subtitle: "Resumia helps you stand out from automated selection systems and recruiters.",
+    ctaAnalyzer: "Analyze Resume",
+    ctaCreator: "Create Resume",
+  },
+};
 
 // Analyzer
 export const images = {
   SpanishIcon,
   EnglishIcon,
+  bot,
   logo,
 };
 
@@ -225,6 +247,7 @@ export const personalInformation = {
     phoneError: "Ingresar un telefono valido",
     emailError: "Ingresar un email valido",
     githubError: "error github",
+    contentError: "Error contenido no valido",
   },
   en: {
     title: "Personal Data",
@@ -240,6 +263,7 @@ export const personalInformation = {
     phoneError: "Enter a valid phone number",
     emailError: "Enter a valid email address",
     githubError: "error github",
+    contentError: "Invalid content error",
   },
 };
 
@@ -252,10 +276,11 @@ export const experience = {
     company: "Empresa",
     description: "Descripción de las tareas realizadas (opcional)",
     button: "Agregar",
-    errorRole: "Rol es obligatorio",
+    errorPosition: "Rol es obligatorio",
     errorCompany: "Debe ingresar el nombre de la empresa",
     errorStartDate: "Fecha de inicio es obligatorio",
     errorDate: "La fecha de inicio no puede ser mayor a la fecha de fin",
+    contentError: "Error contenido no valido",
     toast: "Experiencia añadida con éxito",
   },
   en: {
@@ -270,6 +295,7 @@ export const experience = {
     errorCompany: "You must enter the company name",
     errorStartDate: "Start date is required",
     errorDate: "The start date cannot be later than the end date",
+    contentError: "Invalid content error",
     toast: "Experience added successfully",
   },
 };
@@ -287,6 +313,7 @@ export const education = {
     errorInstitution: "Debe ingresar el nombre de la institución",
     errorState: "Ingrese el estado: Completo, En curso o Incompleto",
     errorHours: "Debe ingresar el número de horas válidas",
+    contentError: "Error contenido no valido",
     toast: "Educación añadida con éxito.",
   },
   en: {
@@ -301,6 +328,7 @@ export const education = {
     errorInstitution: "You must enter the name of the institution",
     errorState: "Enter the status: Complete, In Progress, or Incomplete",
     errorHours: "You must enter the valid number of hours",
+    contentError: "Invalid content error",
     toast: "Successfully added education.",
   },
 };
@@ -314,6 +342,7 @@ export const extra = {
       "Añade propuesta de trabajo a la que deseas aplicar (opcional)",
     errorLanguage: "Debes introducir un idioma.",
     errorLevel: "El nivel es obligatorio",
+    contentError: "Error contenido no valido",
     toast: "Idioma añadido exitosamente.",
   },
   en: {
@@ -324,6 +353,7 @@ export const extra = {
     description: "Add job proposal to which you wish to apply (optional)",
     errorLanguage: "You must enter a language.",
     errorLevel: "The level is mandatory",
+    contentError: "Invalid content error",
     toast: "Successfully added language.",
   },
 };
