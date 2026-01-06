@@ -95,7 +95,7 @@ const ExtraForm = () => {
           <ToastMsg />
           <InputForm
             error={errors.language}
-            errormessage={extra[lang].errorLanguage}
+            errormessage={(errors.language?.message !== "contentError" ? extra[lang].errorLanguage : extra[lang].contentError)}
             Icon={FaGlobe}
           >
             <input
@@ -107,7 +107,7 @@ const ExtraForm = () => {
           </InputForm>
           <InputForm
             error={errors.level}
-            errormessage={extra[lang].errorLevel}
+            errormessage={(errors.level?.message !== "contentError" ? extra[lang].errorLevel : extra[lang].contentError)}
             Icon={FaRegStarHalfStroke}
           >
             <input
@@ -122,7 +122,11 @@ const ExtraForm = () => {
           </button>
         </form>
         <h2 className="text-xl">{extra[lang].title2}</h2>
-        <InputForm Icon={FaRegNewspaper}>
+        <InputForm
+          error={errors.description}
+          errormessage={(errors.description?.message !== "contentError" ? extra[lang].errorDescription : extra[lang].contentError)}
+          Icon={FaRegNewspaper}
+        >
           <textarea
             id="jobPropuse"
             rows={4}
