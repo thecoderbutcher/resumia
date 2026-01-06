@@ -38,8 +38,8 @@ const PersonalForm = () => {
       <div className="flex flex-col space-y-4">
         <h2 className="text-xl">{personalInformation[lang].title}</h2>
         <InputForm
-          error={errors.fullname}
-          errormessage={personalInformation[lang].fullnameError}
+          error={errors.fullname }
+          errormessage={(errors.fullname?.message !== "contentError" ? personalInformation[lang].fullnameError : personalInformation[lang].contentError)}
           Icon={FaUser}
         >
           <input
@@ -53,7 +53,7 @@ const PersonalForm = () => {
 
         <InputForm
           error={errors.phone}
-          errormessage={personalInformation[lang].phoneError}
+          errormessage={(errors.phone?.message !== "contentError" ? personalInformation[lang].phoneError : personalInformation[lang].contentError)}
           Icon={FaPhone}
         >
           <input
@@ -66,7 +66,7 @@ const PersonalForm = () => {
 
         <InputForm
           error={errors.email}
-          errormessage={personalInformation[lang].emailError}
+          errormessage={(errors.email?.message !== "contentError" ? personalInformation[lang].emailError : personalInformation[lang].contentError)}
           Icon={FaEnvelope}
         >
           <input
@@ -77,7 +77,11 @@ const PersonalForm = () => {
           />
         </InputForm>
 
-        <InputForm Icon={FaIdCardClip}>
+        <InputForm
+          error={errors.role}
+          errormessage={(errors.role?.message !== "contentError" ? personalInformation[lang].roleError : personalInformation[lang].contentError)}
+          Icon={FaIdCardClip}
+        >
           <input
             {...register("role")}
             type="text"
@@ -86,7 +90,11 @@ const PersonalForm = () => {
           />
         </InputForm>
 
-        <InputForm Icon={FaEarthAmericas}>
+        <InputForm
+          error={errors.web}
+          errormessage={(errors.web?.message !== "contentError" ? personalInformation[lang].webError : personalInformation[lang].contentError)}
+          Icon={FaEarthAmericas}
+        >
           <input
             {...register("web")}
             type="text"
@@ -95,17 +103,24 @@ const PersonalForm = () => {
           />
         </InputForm>
 
-        <InputForm Icon={FaGithubAlt}>
+        <InputForm
+          error={errors.github}
+          errormessage={(errors.github?.message !== "contentError" ? personalInformation[lang].githubError : personalInformation[lang].contentError)}
+          Icon={FaGithubAlt}
+        >
           <input
             {...register("github")}
-            error={errors.github}
             type="text"
             className="w-full outline-none"
             placeholder={personalInformation[lang].github}
           />
         </InputForm>
 
-        <InputForm Icon={FaLinkedin}>
+        <InputForm    
+          error={errors.linkedin}
+          errormessage={(errors.linkedin?.message !== "contentError" ? personalInformation[lang].linkedinError : personalInformation[lang].contentError)}
+          Icon={FaLinkedin}
+        >
           <input
             {...register("linkedin")}
             type="text"
