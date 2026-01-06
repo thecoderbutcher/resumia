@@ -46,7 +46,7 @@ const EducationForm = () => {
         <ToastMsg />
         <InputForm
           error={errors.degree}
-          errormessage={education[lang].errorCertification}
+          errormessage={(errors.degree?.message !== "contentError" ? education[lang].errorCertification : education[lang].contentError)}
           Icon={FaRegRectangleList}
         >
           <input
@@ -58,7 +58,7 @@ const EducationForm = () => {
         </InputForm>
         <InputForm
           error={errors.institution}
-          errormessage={education[lang].errorInstitution}
+          errormessage={(errors.institution?.message !== "contentError" ? education[lang].errorInstitution : education[lang].contentError)}
           Icon={FaBuildingColumns}
         >
           <input
@@ -70,7 +70,7 @@ const EducationForm = () => {
         </InputForm>
         <InputForm
           error={errors.state}
-          errormessage={education[lang].errorState}
+          errormessage={(errors.state?.message !== "contentError" ? education[lang].errorState : education[lang].contentError)}
           Icon={FaHourglassHalf}
         >
           <input
@@ -82,7 +82,7 @@ const EducationForm = () => {
         </InputForm>
         <InputForm
           error={errors.hours}
-          errormessage={education[lang].errorHours}
+          errormessage={(errors.hours?.message !== "contentError" ? education[lang].errorHours : education[lang].contentError)}
           Icon={FaClockRotateLeft}
         >
           <input
@@ -92,7 +92,11 @@ const EducationForm = () => {
             placeholder={education[lang].duration}
           />
         </InputForm>
-        <InputForm Icon={FaAlignJustify}>
+        <InputForm
+          error={errors.description}
+          errormessage={(errors.description?.message !== "contentError" ? education[lang].errorDescription : education[lang].contentError)}
+          Icon={FaAlignJustify}
+        >
           <textarea
             name=""
             id=""
