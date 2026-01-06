@@ -64,7 +64,7 @@ const ExperienceForm = () => {
         <ToastMsg />
         <InputForm
           error={errors.company}
-          errormessage={experience[lang].errorCompany}
+          errormessage={(errors.company?.message !== "contentError" ? experience[lang].errorCompany : experience[lang].contentError)}
           Icon={FaBuilding}
         >
           <input
@@ -75,8 +75,8 @@ const ExperienceForm = () => {
           />
         </InputForm>
         <InputForm
-          error={errors.role}
-          errormessage={experience[lang].errorRole}
+          error={errors.position}
+          errormessage={(errors.position?.message !== "contentError" ? experience[lang].errorPosition : experience[lang].contentError)}
           Icon={FaBriefcase}
         >
           <input
@@ -88,7 +88,7 @@ const ExperienceForm = () => {
         </InputForm>
         <InputForm
           error={errors.startdate && !startDateValue ? errors.startdate : ""}
-          errormessage={experience[lang].errorStartDate}
+          errormessage={(errors.startdate?.message !== "contentError" ? experience[lang].errorStartDate : experience[lang].contentError)}
           Icon={FaCalendarDay}
         >
           <InputDate
@@ -100,7 +100,7 @@ const ExperienceForm = () => {
         </InputForm>
         <InputForm
           error={endDateValue && startDateValue >= endDateValue}
-          errormessage={experience[lang].errorDate}
+          errormessage={(errors.enddate?.message !== "contentError" ? experience[lang].errorDate : experience[lang].contentError)}
           Icon={FaCalendarDay}
         >
           <InputDate
@@ -110,7 +110,11 @@ const ExperienceForm = () => {
             onChange={saveEndDate}
           />
         </InputForm>
-        <InputForm Icon={FaAlignJustify}>
+        <InputForm
+          error={errors.workDescription}
+          errormessage={(errors.workDescription?.message === "contentError" ? experience[lang].contentError : experience[lang].errorWorkDescription)}
+          Icon={FaAlignJustify}
+        >
           <textarea
             name=""
             id=""
