@@ -2,25 +2,119 @@ import SpanishIcon from "../src/assets/images/spanish.png";
 import EnglishIcon from "../src/assets/images/english.png";
 import logo from "../src/assets/images/logo.webp";
 import bot from "../src/assets/images/resumiabot.webp";
+import analyzerImage1 from "../src/assets/images/analyzer-1.webp";
+import analyzerImage2 from "../src/assets/images/analyzer-2.webp";
+import creatorImage from "../src/assets/images/creator.webp";
 
 //Home
-
 export const hero = {
   es: {
-    supertitle:"Curriculum potenciados con ia",
+    supertitle: "Curriculum potenciados con IA",
     title: "Analiza, mejora o crea tu Curriculum",
     subtitle:
       "Resumia te ayuda a destacar frente a los sistemas de selección automática y los reclutadores.",
-      ctaAnalyzer: "Analizar CV",
-      ctaCreator: "Crear CV",
+    ctaAnalyzer: "Analizar CV",
+    ctaCreator: "Crear CV",
   },
   en: {
-    supertitle:"AI-powered Resume",
+    supertitle: "AI-powered Resume",
     title: "Analyze, improve, or create your resume.",
-    subtitle: "Resumia helps you stand out from automated selection systems and recruiters.",
+    subtitle:
+      "Resumia helps you stand out from automated selection systems and recruiters.",
     ctaAnalyzer: "Analyze Resume",
     ctaCreator: "Create Resume",
   },
+};
+
+export const analyzer = {
+  es: {
+    title: "Analiza tu CV en segundos y obtén recomendaciones personalizadas.",
+    subtitle:
+      "Descubre si tu currículum pasaría un sistema ATS y cómo mejorarlo.",
+    steps: [
+      {
+        title: "1. Sube tu CV",
+        text: "Carga tu currículum en segundos (PDF).",
+      },
+      {
+        title: "2. Análisis inteligente",
+        text: "Resumia analiza estructura, palabras clave, experiencia y habilidades según el puesto al que te postulas.",
+      },
+      {
+        title: "3. Resultados claros y accionables",
+        text: "Obtén una puntuación de compatibilidad ATS, detección de faltantes y recomendaciones específicas para mejorar tu CV.",
+      },
+    ],
+    button: "Analizar mi CV ahora",
+  },
+  en: {
+    title: "Analyze your CV in seconds and get personalized recommendations.",
+    subtitle:
+      "Find out if your resume would pass an ATS system and how to improve it.",
+    steps: [
+      {
+        title: "1. Upload your CV",
+        text: "Upload your resume in seconds (PDF).",
+      },
+      {
+        title: "2. Intelligent analysis",
+        text: "Resumia analyzes structure, keywords, experience, and skills based on the job you are applying for.",
+      },
+      {
+        title: "3. Clear and actionable results",
+        text: "Get an ATS compatibility score, missing detection, and specific recommendations to improve your CV.",
+      },
+    ],
+    button: "Analyze my CV now",
+  },
+  images: [
+    { url: analyzerImage1, alt: "Screen 1" },
+    { url: analyzerImage2, alt: "Screen 2" },
+  ],
+};
+
+export const creator = {
+  es: {
+    title: "Crea un CV optimizado desde cero",
+    subtitle:
+      "Genera un currículum profesional, moderno y 100% compatible con ATS en pocos pasos.",
+    steps: [
+      {
+        title: "1. Define tu perfil",
+        text: "Indica tu experiencia, habilidades y el puesto al que apuntas.",
+      },
+      {
+        title: "2. Generación con IA",
+        text: "Resumia redacta y estructura tu CV optimizando contenido, logros y palabras clave.",
+      },
+      {
+        title: "3. Descarga y postúlate",
+        text: "Obtén un CV listo para enviar a cualquier plataforma de empleo.",
+      },
+    ],
+    button: "Crear mi CV ahora",
+  },
+  en: {
+    title: "Create an optimized CV from scratch",
+    subtitle:
+      "Generate a professional, modern, and fully ATS-compatible resume in just a few steps.",
+    steps: [
+      {
+        title: "1. Define your profile",
+        text: "Indicate your experience, skills, and the position you're targeting.",
+      },
+      {
+        title: "2. AI-powered generation",
+        text: "Resumia writes and structures your CV, optimizing content, achievements, and keywords.",
+      },
+      {
+        title: "3. Download and apply",
+        text: "Get a CV ready to submit to any job platform.",
+      },
+    ],
+    button: "Create my CV now",
+  },
+  images: [{ url: creatorImage, alt: "Screen 3" }],
 };
 
 // Analyzer
